@@ -1,20 +1,17 @@
 import './App.css';
-import sound from './assets/Sound.wav';
-import {useState} from 'react';
+import AudioButton from './content/AudioButton';
+import Donut from './content/Donut';
 
 function App() {
-  const [play, setPlay]= useState(0);
-
-  function Play(){
-    new Audio(sound).play()
-  }
 
   return (
       <div className='App'>
         <header>
-          <span className='Title'></span>
-          <div className='Mute' onClick={Play}>{}</div>
+          <span className='title'>MyDonutFarm</span>
+          <AudioButton/>
         </header>
+
+        <Donut/>
       </div>
   );
 }

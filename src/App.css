@@ -6,3 +6,21 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+  header {
+    background-color: aliceblue;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+  }
+
+  .title{
+    /* position: absolute; */
+    color:  gray;
+    font-family: 'Rubik 80s Fade', cursive;
+    font-size: 50px;
+    font-weight: bolder;
+
+  }
