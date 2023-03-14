@@ -1,6 +1,7 @@
 import './App.css';
 import AudioButton from './content/AudioButton';
 import Donut from './content/Donut';
+import Shop from './content/Shop';
 
 function App() {
 
@@ -12,7 +13,13 @@ function App() {
           <AudioButton/>
         </header>
 
-        <Donut/>
+        <div className="donut">
+          <Donut/>
+        </div>
+
+        <div className="shop">
+          <Shop/>
+        </div>
       </div>
   );
 }

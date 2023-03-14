@@ -1,0 +1,13 @@
+.main{
+    margin-left: 10%;
+    width: 80%;
+    height: 200px;
+    background-image: url('../../assets/pergaminho.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}

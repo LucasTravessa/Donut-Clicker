@@ -1,13 +1,16 @@
 import "./styles.css"
-import {useState} from 'react';
+
+import { useCount } from "../../contexts/Counter";
 
 function Donut() {
-    const [count, setCount] = useState(0);
+    const { counter, addCounter }= useCount();
+
     return (
         <div className="Main">
-            <span className="counter">Quantos Donuts {count}</span>
             <div className="donut-container"
-            onClick={()=>setCount(count+1)}
+            onClick={()=>{
+                addCounter(counter+1);
+            }}
             >
             </div>
         </div>
