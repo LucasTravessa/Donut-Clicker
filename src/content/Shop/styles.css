@@ -1,13 +1,44 @@
-.main{
-    margin-left: 10%;
-    width: 80%;
-    height: 200px;
-    background-image: url('../../assets/pergaminho.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+.main {
+  margin-left: 10%;
+  width: 80%;
+  height: 200px;
+  background-image: url("../../assets/pergaminho.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.itens-list {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-family: "Rubik 80s Fade", cursive;
+  font-size: large;
+}
+
+
+.image {
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.cursor {
+  background-image: url("../../assets/cursor.png");
 }

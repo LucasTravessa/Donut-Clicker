@@ -1,29 +1,54 @@
-import './styles.css'
+import "./styles.css";
 
 import { useCount } from "../../contexts/Counter";
+import { useState } from "react";
 
+export default function Shop() {
+  const { counter } = useCount();
 
-export default function Shop(){
+  return (
+    <div className="main">
+      <span className="text">Você possui {counter} Donuts</span>
+      <div className="itens-list">
+        <Cursor />
+        <GrandMa />
+        <Factory />
+      </div>
+    </div>
+  );
+}
 
-    const {counter, addCounter}= useCount();
+function Cursor() {
+  const {counter, addCounter}= useCount();
 
+  const [amount, setAmount] = useState(0);
 
+  if(amount !== 0){
+     setInterval(()=>{
+      addCounter(counter+1)
+    }, 2000/amount)
+  }
 
-    return(
-        <div className='main'>
-            <div className="donut-conter">Você possui {counter} Donuts</div>
-            <div className="itens-list">
-                <div className="item 1"
-                onClick={()=>{
-                    addCounter(counter+1)
-                }}
-                > Cursor</div>
-                <div className="item 2"> Grand-ma</div>
-                <div className="item 3"> Factory</div>
-            </div>
+  return (
+    <div className="item">
+      <div
+        className="image cursor"
+        onClick={() => {
+          if(counter >= 10){
+            setAmount(amount + 1);
+            addCounter(counter-10);
+          }
+        }}
+      ></div>
+      <span className="text">Cursor: {amount}</span>
+    </div>
+  );
+}
 
+function GrandMa() {
+  return <div>Grand-ma</div>;
+}
 
-        </div>
-    );
-
+function Factory() {
+  return <div>Factory</div>;
 }

@@ -1,23 +1,23 @@
-.Main{
+.Main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.donut-container{
+.donut-container {
   height: 500px;
   width: 500px;
-  background-image: url('../../assets/donut.png');
+  background-image: url("../../assets/donut.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 50% 50% ;
+  border-radius: 50% 50%;
   cursor: pointer;
 }
 
-.counter{
-  font-family: 'Rubik 80s Fade', cursive;
+.counter {
+  font-family: "Rubik 80s Fade", cursive;
   font-size: 50px;
   color: white;
 }

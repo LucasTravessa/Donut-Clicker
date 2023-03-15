@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./styles.css"
+import "./styles.css";
 
 // Import your audio file
 import song from "../../assets/sound.mp3";
@@ -7,7 +7,6 @@ import song from "../../assets/sound.mp3";
 class AudioButton extends Component {
   // Create state
   state = {
-
     // Get audio file in a variable
     audio: new Audio(song),
 
@@ -17,7 +16,6 @@ class AudioButton extends Component {
 
   // Main function to handle both play and pause operations
   playPause = () => {
-
     // Get state of song
     let isPlaying = this.state.isPlaying;
 
@@ -25,7 +23,6 @@ class AudioButton extends Component {
       // Pause the song if it is playing
       this.state.audio.pause();
     } else {
-
       // Play the song if it is paused
       this.state.audio.play();
     }
@@ -36,15 +33,13 @@ class AudioButton extends Component {
 
   render() {
     return (
-        <>
-            {/* Button to call our main function */}
-            <div
-            onClick={this.playPause}
-            className={this.state.isPlaying?"play-btn":"pause-btn"}
-            >
-            
-            </div>
-        </>
+      <>
+        {/* Button to call our main function */}
+        <div
+          onClick={this.playPause}
+          className={this.state.isPlaying ? "play-btn" : "pause-btn"}
+        ></div>
+      </>
     );
   }
 }
