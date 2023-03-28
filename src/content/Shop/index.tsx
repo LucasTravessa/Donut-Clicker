@@ -1,7 +1,7 @@
 import "./styles.css";
 
 import { useCount } from "../../contexts/Counter";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Shop() {
   const { counter } = useCount();
@@ -19,28 +19,17 @@ export default function Shop() {
 }
 
 function Cursor() {
-  const {counter, addCounter}= useCount();
-
-  const [amount, setAmount] = useState(0);
-
-  if(amount !== 0){
-     setInterval(()=>{
-      addCounter(counter+1)
-    }, 2000/amount)
-  }
+  const { Upgrade }= useCount();
 
   return (
     <div className="item">
       <div
         className="image cursor"
         onClick={() => {
-          if(counter >= 10){
-            setAmount(amount + 1);
-            addCounter(counter-10);
-          }
+          Upgrade?.(10, 1, 1000);
         }}
       ></div>
-      <span className="text">Cursor: {amount}</span>
+      <span className="text">Cursor: {}</span>
     </div>
   );
 }

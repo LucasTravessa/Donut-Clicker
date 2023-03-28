@@ -11,7 +11,7 @@ function Donut() {
       <div
         className="donut-container"
         onClick={() => {
-          addCounter(counter + 1);
+          addCounter?.(counter + 1);
         }}
       ></div>
     </div>
